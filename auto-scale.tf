@@ -19,5 +19,7 @@ resource "aws_appautoscaling_policy" "ecs_target_request_count" {
       resource_label         = "app/${aws_lb.ecs_lb.name}/${basename("${aws_lb.ecs_lb.id}")}/targetgroup/${aws_lb_target_group.ecs_lb_tg.name}/${basename("${aws_lb_target_group.ecs_lb_tg.id}")}"
     }
     target_value = var.target_value_request_count
+    scale_in_cooldown  = var.scale_in_cooldown
+    scale_out_cooldown = var.scale_out_cooldown
   }
 }

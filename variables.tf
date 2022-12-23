@@ -77,3 +77,13 @@ variable "memory_capacity" {
   type = number
   default = 1024
 }
+
+variable "scale_in_cooldown" {
+  type = number
+  default = 300
+}
+
+variable "scale_out_cooldown" {
+  type = number
+  default = 300
+}
