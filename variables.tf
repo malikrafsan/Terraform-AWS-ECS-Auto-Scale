@@ -60,7 +60,7 @@ variable "min_capacity" {
   
 variable "max_capacity" {
   type = number
-  default = 20
+  default = 15
 }
 
 variable "target_value_request_count" {
@@ -80,10 +80,10 @@ variable "memory_capacity" {
 
 variable "scale_in_cooldown" {
   type = number
-  default = 300
+  default = 150
 }
 
 variable "scale_out_cooldown" {
   type = number
-  default = 300
+  default = 150
 }
