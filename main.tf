@@ -29,8 +29,8 @@ resource "aws_ecs_task_definition" "ecs_task" {
   family                   = "ecs-nginx-service-13520105"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  cpu                      = 256
-  memory                   = 1024
+  cpu                      = var.cpu_capacity
+  memory                   = var.memory_capacity
   container_definitions    = <<DEFINITION
   [
     {

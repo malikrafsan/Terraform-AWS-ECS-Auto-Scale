@@ -6,8 +6,6 @@ resource "aws_appautoscaling_target" "ecs_target" {
   service_namespace  = "ecs"
 }
 
-// Scale capacity up by one
-
 resource "aws_appautoscaling_policy" "ecs_target_request_count" {
   name               = "ecs-target-request-count"
   policy_type        = "TargetTrackingScaling"

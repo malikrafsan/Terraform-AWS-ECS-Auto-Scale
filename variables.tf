@@ -68,3 +68,12 @@ variable "target_value_request_count" {
   default = 10
 }
 
+variable "cpu_capacity" {
+  type = number
+  default = 256
+}
+
+variable "memory_capacity" {
+  type = number
+  default = 1024
+}
