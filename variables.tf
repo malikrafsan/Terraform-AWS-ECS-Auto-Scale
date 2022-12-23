@@ -48,6 +48,16 @@ variable "cidr_block_route_table" {
   default = "0.0.0.0/0"
 }
 
+variable "cpu_capacity" {
+  type = number
+  default = 256
+}
+
+variable "memory_capacity" {
+  type = number
+  default = 1024
+}
+
 variable "app_count" {
   type = number
   default = 2
@@ -66,16 +76,6 @@ variable "max_capacity" {
 variable "target_value_request_count" {
   type = number
   default = 10
-}
-
-variable "cpu_capacity" {
-  type = number
-  default = 256
-}
-
-variable "memory_capacity" {
-  type = number
-  default = 1024
 }
 
 variable "scale_in_cooldown" {
